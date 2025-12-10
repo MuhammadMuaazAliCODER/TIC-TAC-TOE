@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+    <link rel="shortcut icon" href="https://codewithmuaaz.online/Favicon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TIC TAC TOE</h1>
+            <div class="subtitle">BY CODE WITH MUAAZ</div>
+        </div>
+        <div class="settings-bar">
+            <button class="setting-btn active" id="musicBtn" onclick="toggleMusic()">
+                <span class="icon"><i class="fa-solid fa-music"></i></span>
+                <span>Music</span>
+            </button>
+            <button class="setting-btn active" id="soundBtn" onclick="toggleSound()">
+                <span class="icon">🔊</span>
+                <span>Sound</span>
+            </button>
+            <button class="setting-btn active" id="vibrationBtn" onclick="toggleVibration()">
+                <span class="icon">📳</span>
+                <span>Vibration</span>
+            </button>
+        </div>
+
+        <div class="mode-selection" id="modeSelection">
+            <button class="mode-btn" onclick="selectMode('pvp')">
+                 <span>Player <i class="fa-solid fa-person" style="color: #0091ff;"></i> vs <i class="fa-solid fa-person" style="color: #0091ff;"></i> Player</span>
+            </button>
+            <button class="mode-btn" onclick="selectMode('pvc')">
+               <span>Player  <i class="fa-solid fa-person" style="color: #0091ff;"></i> vs <i class="fa-solid fa-robot" style="color: #0091ff;"></i> Computer</span>
+            </button>
+        </div>
+
+        <div class="match-selection hidden" id="matchSelection">
+            <button class="match-btn" onclick="selectMatch('single')">
+                <span>Single Game</span>
+            </button>
+            <button class="match-btn" onclick="selectMatch('best3')">
+                <span>Best of 3</span>
+            </button>
+            <button class="match-btn" onclick="selectMatch('best5')">
+                <span>Best of 5</span>
+            </button>
+        </div>
+
+        <div class="game-info hidden" id="gameInfo">
+            <div class="score-board">
+                <div class="score-item">
+                    <div class="score-label">Player X</div>
+                    <div class="score-value" id="scoreX">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">Draws</div>
+                    <div class="score-value" id="scoreDraw">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">Player O</div>
+                    <div class="score-value" id="scoreO">0</div>
+                </div>
+            </div>
+            <div class="round-info" id="roundInfo"></div>
+            <div class="current-player" id="currentPlayer"></div>
+            <div class="message" id="message"></div>
+        </div>
+
+        <div class="board hidden" id="board">
+            <div class="cell" onclick="makeMove(0)"></div>
+            <div class="cell" onclick="makeMove(1)"></div>
+            <div class="cell" onclick="makeMove(2)"></div>
+            <div class="cell" onclick="makeMove(3)"></div>
+            <div class="cell" onclick="makeMove(4)"></div>
+            <div class="cell" onclick="makeMove(5)"></div>
+            <div class="cell" onclick="makeMove(6)"></div>
+            <div class="cell" onclick="makeMove(7)"></div>
+            <div class="cell" onclick="makeMove(8)"></div>
+        </div>
+
+        <div class="controls hidden" id="controls">
+            <button class="btn btn-primary" onclick="resetRound()">
+                <span>New Round</span>
+            </button>
+            <button class="btn btn-secondary" onclick="resetGame()">
+                <span>New Game</span>
+            </button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
