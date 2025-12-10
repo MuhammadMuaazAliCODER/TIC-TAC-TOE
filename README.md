@@ -50,4 +50,4 @@ If you think Tic Tac Toe is a simple childhood game…
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/<username>/modern-tic-tac-toe.git](https://github.com/MuhammadMuaazAliCODER/TIC-TAC-TOE
+   git clone https://github.com/MuhammadMuaazAliCODER/TIC-TAC-TOE
